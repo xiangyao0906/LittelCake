@@ -1,0 +1,78 @@
+apply plugin: 'com.android.library'
+
+apply plugin: 'kotlin-android-extensions'
+
+apply plugin: 'kotlin-android'
+
+apply plugin: 'kotlin-kapt'
+
+android {
+    compileSdkVersion rootProject.ext.android.compileSdkVersion
+    defaultConfig {
+        minSdkVersion rootProject.ext.android.minSdkVersion
+        targetSdkVersion rootProject.ext.android.targetSdkVersion
+        versionCode rootProject.ext.android.versionCode
+        versionName rootProject.ext.android.versionName
+    }
+
+    buildTypes {
+        debug{
+
+        }
+
+        beta{
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
+        }
+
+        release {
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
+        }
+    }
+
+    compileOptions {
+        sourceCompatibility JavaVersion.VERSION_1_8
+        targetCompatibility JavaVersion.VERSION_1_8
+    }
+
+    dataBinding{
+        enabled = true
+    }
+
+}
+
+dependencies {
+    api fileTree(include: ['*.jar', '*.aar'], dir: 'libs')
+    //net
+    api rootProject.ext.dependencies["retrofit"]
+    api rootProject.ext.dependencies["converter-gson"]
+    api rootProject.ext.dependencies["adapter-rxjava"]
+    api rootProject.ext.dependencies["logger-interceptor"]
+    //RxKotlin and RxAndroid
+    api rootProject.ext.dependencies["rxkotlin"]
+    api rootProject.ext.dependencies["rxandroid"]
+    //RxLifecycle
+    api rootProject.ext.dependencies["rxlifecycle-kotlin"]
+    api rootProject.ext.dependencies["rxlifecycle-component"]
+    //Google AAC (viewModel and liveData)
+    implementation rootProject.ext.androidx["lifecycle-extensions"]
+    kapt rootProject.ext.androidx["lifecycle-compiler"]
+    api rootProject.ext.kotlin_stdlib_jdk7
+    api rootProject.ext.androidx["appcompat"]
+    api rootProject.ext.androidx["core-ktx"]
+    api rootProject.ext.androidx["constraintlayout"]
+    api rootProject.ext.androidx["recycyvlerView"]
+    // Toast{@link https://github.com/Dovar66/DToast}
+    implementation rootProject.ext.dependencies["DToast"]
+    // rxBinding
+    implementation rootProject.ext.dependencies["rxbinding-kotlin"]
+    // glide
+    api rootProject.ext.dependencies["glide"]
+    // rxPermissions
+    api rootProject.ext.dependencies["rxpermissions"]
+    // rxBus {link https://github.com/AndroidKnife/RxBus}
+    api(rootProject.ext.dependencies["rxbus"]) {
+        exclude group: 'com.jakewharton.timber', module: 'timber'
+    }
+}
