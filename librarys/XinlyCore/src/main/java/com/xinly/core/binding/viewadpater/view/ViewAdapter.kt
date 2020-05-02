@@ -2,6 +2,8 @@ package com.xinly.core.binding.viewadpater.view
 
 import android.annotation.SuppressLint
 import android.view.View
+import android.widget.Button
+import android.widget.LinearLayout
 import androidx.databinding.BindingAdapter
 import com.jakewharton.rxbinding2.view.RxView
 import com.xinly.core.binding.command.BindingCommand
@@ -23,7 +25,7 @@ object ViewAdapter {
     @SuppressLint("CheckResult")
     @BindingAdapter(value = ["onClickCommand", "isThrottleFirst"], requireAll = false)
     @JvmStatic
-    fun onClickCommand(view: View, clickCommand: BindingCommand<Nothing>, isThrottleFirst: Boolean) {
+    fun onClickCommand(view: Button, clickCommand: BindingCommand<Nothing>, isThrottleFirst: Boolean) {
         if (isThrottleFirst) {
             RxView.clicks(view)
                     .subscribe {
@@ -44,7 +46,7 @@ object ViewAdapter {
     @SuppressLint("CheckResult")
     @JvmStatic
     @BindingAdapter(value = ["onLongClickCommand"], requireAll = false)
-    fun onLongClickCommand(view: View, clickCommand: BindingCommand<Nothing>) {
+    fun onLongClickCommand(view: Button, clickCommand: BindingCommand<Nothing>) {
         RxView.longClicks(view)
                 .subscribe{
                     clickCommand.execute()

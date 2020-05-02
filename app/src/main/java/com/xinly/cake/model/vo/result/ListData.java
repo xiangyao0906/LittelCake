@@ -7,13 +7,13 @@ import java.util.ArrayList;
  */
 public class ListData<T> {
 
-    private ArrayList<T> list;
+    private ArrayList<T> itemList;
 
-    public ArrayList<T> getList() {
-        return list;
+    public ArrayList<T> getItemList() {
+        return itemList;
     }
 
-    public void setList(ArrayList<T> list) {
-        this.list = list;
+    public void setItemList(ArrayList<T> itemList) {
+        this.itemList = itemList;
     }
 }

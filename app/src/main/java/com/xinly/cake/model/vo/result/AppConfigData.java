@@ -1,6 +1,5 @@
 package com.xinly.cake.model.vo.result;
 
-import com.xinly.cake.model.vo.bean.NoticeBean;
 import com.xinly.cake.model.vo.bean.VersionBean;
 
 import java.util.List;
@@ -11,8 +10,6 @@ import java.util.List;
 public class AppConfigData {
     //版本信息
     private VersionBean version;
-    //通知信息
-    private List<NoticeBean> notice;
     //钱包设置
     private AppSettingsData setting;
 
@@ -42,13 +39,6 @@ public class AppConfigData {
         this.version = version;
     }
 
-    public List<NoticeBean> getNotice() {
-        return notice;
-    }
-
-    public void setNotice(List<NoticeBean> notice) {
-        this.notice = notice;
-    }
 
     public static class StatisBean {
         double invite;

@@ -2,4 +2,4 @@ rootProject.name='LittelCake'
 include ':app',
         ":librarys:XinlyCore",
         ':librarys:lib-zxing',
-        ':librarys:Upgrade'
+        ':librarys:Upgrade', ':OpenGLlibrary'

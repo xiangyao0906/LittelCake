@@ -1,5 +1,5 @@
 <resources>
-    <string name="app_name">LittelCake</string>
+    <string name="app_name">开眼</string>
     <string name="detail_text">我发斯蒂芬是打发阿斯蒂芬撒地我发斯蒂芬是打发阿斯蒂芬撒地方我打发阿斯
         发斯蒂芬是打发阿斯蒂芬撒地方我发斯蒂芬是打发阿斯蒂芬撒地方我发斯蒂打发阿斯蒂芬撒地方我蒂芬撒发
         我发斯蒂芬是打发阿斯蒂芬撒地方我发斯蒂撒地方芬是打发阿斯蒂打发阿斯蒂芬撒地方我撒地方我我蒂芬撒
@@ -34,4 +34,34 @@
         发阿斯蒂芬撒地方我发斯蒂芬是打发阿斯蒂芬撒地方方撒地方芬是打发阿斯蒂芬撒地方我发斯蒂芬是打发阿
         芬撒地方方撒地方芬是打发阿斯蒂芬撒地方我发斯蒂芬是打发阿斯蒂芬撒地方方撒地方我发斯蒂芬是打发阿
         撒地方芬是打发阿斯蒂芬撒地方我发斯蒂芬是打发阿斯蒂芬撒地方方</string>
+
+    <!-- add a sound -->
+    <string name="select_music">选择音乐</string>
+    <!--flip-->
+    <string name="camera_flip">翻转</string>
+
+    <string name="select_cover">选择封面</string>
+
+    <string name="filters">滤镜</string>
+    <string name="effects">特效</string>
+    <string name="cover">封面</string>
+    <!--original sound-->
+    <string name="original_sound">原生音效</string>
+    <!--adjust video speed-->
+    <string name="video_speed">调节视频速度</string>
+    <string name="compressed">压缩中</string>
+    <string name="modified">修改中</string>
+    <string name="music">音乐</string>
+    <string name="volume">音量</string>
+
+    <string name="compre_failure">压缩成功</string>
+    <string name="compre_success">压缩失败</string>
+    <string name="flatten_failure">拼合失败</string>
+
+    <!--very slow-->
+    <string name="video_speed_0">极慢</string>
+    <string name="video_speed_1">慢</string>
+    <string name="video_speed_2">快</string>
+    <string name="video_speed_3">极快</string>
+    <string name="delete_some">请去删除一些</string>
 </resources>

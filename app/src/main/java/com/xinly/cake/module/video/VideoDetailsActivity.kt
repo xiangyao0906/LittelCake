@@ -22,7 +22,7 @@ class VideoDetailsActivity : BaseActivity<VideoBinding, VideoViewModel>() {
     private var isPlay = false
     private val isPause = false
     private val url =
-        "http://nclive.grtn.cn/tvs1hd/hd/live.m3u8"
+        "http://www.hljlzy.com/__local/3/02/47/2B18A9AAF148DCCA5E80E681361_85FE12AB_8178702.mp4?e=.mp4"
 
     override fun initContentViewId(savedInstanceState: Bundle?): Int =
         R.layout.activity_video_details

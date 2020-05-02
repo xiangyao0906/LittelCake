@@ -26,6 +26,7 @@ class SplashActivity : AppCompatActivity() {
 
         RxPermissions(this).request(
             Manifest.permission.READ_PHONE_STATE,
+            Manifest.permission.CAMERA,
             Manifest.permission.WRITE_EXTERNAL_STORAGE,
             Manifest.permission.READ_EXTERNAL_STORAGE)
             .subscribe{ grant ->
@@ -62,7 +63,6 @@ class SplashActivity : AppCompatActivity() {
      */
     private fun jumpMain() {
         val intent = Intent(this@SplashActivity, MainActivity::class.java)
-        intent.putExtra(Constans.EXTRAS_KEY_IS_AUTHENTICATION, true)
         startActivity(intent)
         finish()
     }

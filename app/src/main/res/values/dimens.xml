@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!-- 状态栏高度 -->
+    <dimen name="status_bar_height">25dp</dimen>
+    <!-- 标题栏高度 -->
+    <dimen name="action_bar_height">44dp</dimen>
+    <!-- 按钮高度 -->
+    <dimen name="btn_height_normal">40dp</dimen>
+    <!-- 按钮高度 -->
+    <dimen name="nav_height">49dp</dimen>
+
+    <dimen name="dkplayer_controller_height">46dp</dimen>
+    <dimen name="dkplayer_controller_icon_padding">12dp</dimen>
+    <dimen name="dkplayer_controller_text_size">16sp</dimen>
+    <dimen name="dkplayer_default_spacing">10dp</dimen>
+    <dimen name="dkplayer_controller_seekbar_size_n">14dp</dimen>
+    <dimen name="dkplayer_controller_seekbar_size_s">14dp</dimen>
+    <dimen name="dkplayer_controller_seekbar_max_size">1dp</dimen>
+    <dimen name="dkplayer_play_btn_size">50dp</dimen>
+    <dimen name="dkplayer_controller_time_text_size">14sp</dimen>
+    <!-- 字体 -->
+    <dimen name="text_small_size">12sp</dimen>
+    <dimen name="text_middle_size">14sp</dimen>
+    <dimen name="text_big_size">16sp</dimen>
+    <dimen name="text_large_size">18sp</dimen>
+</resources>

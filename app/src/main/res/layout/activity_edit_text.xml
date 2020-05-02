@@ -1,0 +1,232 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    xmlns:xiangyao="http://schemas.android.com/apk/res-auto">
+
+    <data class="EditTextBinding">
+
+        <variable
+            name="viewModel"
+            type="com.xinly.cake.module.wight.EditTextViewModel" />
+
+    </data>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        tools:context="com.xinly.mcn.module.hall.publish.PublishFragment">
+
+        <androidx.core.widget.NestedScrollView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:fillViewport="true">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical">
+
+                <!--交易数量-->
+                <TextView
+                    android:id="@+id/tradeTitle"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="20dp"
+                    android:layout_marginTop="43dp"
+                    android:textColor="@color/blue"
+                    android:textSize="14sp"
+                    android:text="购买数量" />
+
+                <com.google.android.material.textfield.TextInputLayout
+                    android:layout_marginEnd="20dp"
+                    android:layout_marginStart="20dp"
+                    android:id="@+id/input"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="30dp">
+
+                        <EditText
+                            android:id="@+id/tradeNumEdit"
+                            android:layout_width="0dp"
+                            android:layout_height="match_parent"
+                            android:layout_weight="1"
+                            android:background="@null"
+                            android:hint="请输入购买数量"
+                            android:inputType="numberDecimal"
+                            android:textColorHint="#333333"
+                            android:textSize="14sp" />
+
+                        <TextView
+                            android:id="@+id/coinName"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginStart="10dp"
+                            android:layout_marginEnd="20dp"
+                            android:textColor="@color/blue"
+                            android:textSize="14sp"
+                            tools:text="BTC" />
+                    </LinearLayout>
+
+                    <View
+                        android:layout_width="match_parent"
+                        android:layout_height="1dp"
+                        android:layout_marginTop="10dp"
+                        android:background="#333333" />
+
+                    <TextView
+                        android:visibility="gone"
+                        android:id="@+id/balanceTV"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="10dp"
+                        android:gravity="end"
+                        android:text="市场参考价 52,000.00 CNY/BTC"
+                        android:textColor="@color/blue"
+                        android:textSize="14sp"
+                        tools:visibility="visible" />
+                </com.google.android.material.textfield.TextInputLayout>
+                <!--交易单价-->
+                <TextView
+                    android:id="@+id/tradePeerPriceTitle"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="20dp"
+                    android:layout_marginTop="17dp"
+                    android:textColor="@color/blue"
+
+                    android:textSize="14sp"
+                    tools:text="购买单价" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="30dp"
+                    android:layout_marginStart="20dp"
+                    android:layout_marginTop="10dp">
+
+                    <EditText
+                        android:id="@+id/tradePeerPriceInput"
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1"
+                        android:background="@null"
+                        android:hint="请输入购买单价"
+                        android:inputType="numberDecimal"
+                        android:textColorHint="#333333"
+                        android:textSize="14sp" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="10dp"
+                        android:layout_marginEnd="20dp"
+                        android:text="CNY"
+                        android:textColor="@color/white"
+                        android:textSize="14sp" />
+                </LinearLayout>
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:layout_marginStart="20dp"
+                    android:layout_marginTop="10dp"
+                    android:layout_marginEnd="20dp"
+                    android:background="#333333" />
+
+                <TextView
+                    android:id="@+id/marketPrice"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="20dp"
+                    android:layout_marginTop="10dp"
+                    android:layout_marginEnd="20dp"
+                    android:gravity="end"
+                    android:textColor="@color/blue"
+                    android:textSize="14sp"
+                    android:text="市场参考价 52,000.00 CNY/BTC" />
+                <!--交易限额-->
+                <TextView
+
+                    android:id="@+id/buyLimitTitle"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="20dp"
+                    android:layout_marginTop="17dp"
+                    android:textColor="@color/blue"
+                    android:textSize="14sp"
+                    tools:text="购买限额(CNY)" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="50dp"
+                    android:layout_marginStart="20dp"
+                    android:layout_marginTop="10dp"
+                    android:layout_marginEnd="20dp">
+
+                    <LinearLayout
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1"
+                        android:orientation="vertical">
+
+                        <EditText
+                            android:id="@+id/tradeMinPrice"
+                            android:layout_width="match_parent"
+                            android:layout_height="49dp"
+                            android:background="@null"
+                            android:gravity="center"
+                            android:hint="最小限额"
+                            android:inputType="numberDecimal"
+                            android:textColorHint="#333333"
+                            android:textSize="14sp" />
+
+                        <View
+                            android:layout_width="match_parent"
+                            android:layout_height="1dp"
+                            android:background="#333333" />
+                    </LinearLayout>
+
+                    <View
+                        android:layout_width="20dp"
+                        android:layout_height="2dp"
+                        android:layout_gravity="center_vertical"
+                        android:layout_marginStart="20dp"
+                        android:layout_marginEnd="20dp"
+                        android:background="@color/white" />
+
+                    <LinearLayout
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1"
+                        android:orientation="vertical">
+
+                        <EditText
+                            android:id="@+id/tradeMaxPrice"
+                            android:layout_width="match_parent"
+                            android:layout_height="49dp"
+                            android:background="@null"
+                            android:gravity="center"
+                            android:hint="最小限额"
+                            android:inputType="numberDecimal"
+                            android:textColorHint="#333333"
+                            android:textSize="14sp" />
+
+                        <View
+                            android:layout_width="match_parent"
+                            android:layout_height="1dp"
+                            android:background="#333333" />
+                    </LinearLayout>
+                </LinearLayout>
+
+                <Button
+                    onClickCommand="@{viewModel.hahAction}"
+                    android:text="哈哈"
+                    android:layout_width="match_parent"
+                    android:layout_height="70dp"/>
+            </LinearLayout>
+        </androidx.core.widget.NestedScrollView>
+    </LinearLayout>
+</layout>

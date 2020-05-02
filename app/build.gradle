@@ -247,7 +247,7 @@ dependencies {
     testImplementation 'junit:junit:4.12'
     androidTestImplementation 'androidx.test.ext:junit:1.1.1'
     androidTestImplementation 'androidx.test.espresso:espresso-core:3.2.0'
-    implementation 'com.android.support:multidex:1.0.3'
+    implementation 'androidx.multidex:multidex:2.0.0'
     // 上拉加载
     implementation rootProject.ext.dependencies["smartrefresh"]
     //状态栏 {@link https://github.com/gyf-dev/ImmersionBar}
@@ -263,5 +263,11 @@ dependencies {
 
     //完整版引入
     implementation 'com.shuyu:GSYVideoPlayer:7.1.2'
+    //BottomNavigation
+    implementation 'com.ashokvarma.android:bottom-navigation-bar:2.2.0'
+    implementation project(path: ':OpenGLlibrary')
+    implementation 'com.github.yangjie10930:EpMedia:v0.9.5'
+
+    implementation 'com.google.android.material:material:1.1.0'
 
 }

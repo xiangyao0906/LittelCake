@@ -46,6 +46,14 @@ fun <T> Observable<BaseResp<T>>.convert(): Observable<T> {
 }
 
 /**
+ * 扩展数据转换
+ * 没有code message
+ */
+fun <T> Observable<T>.withOutCode(): Observable<T> {
+    return this
+}
+
+/**
  * 扩展数据处理
  */
 fun <T> Observable<BaseResp<T>>.handleResult(): Observable<BaseResp<T>> {
